@@ -1,0 +1,8 @@
+{
+  "name": "Remix Happy Birthday Celebration \u0026 Greeting Card",
+  "description": "Interactive birthday celebration experience with customizable cake, candle blowout, floating balloons, confetti cannons, heartfelt greeting card, and music.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

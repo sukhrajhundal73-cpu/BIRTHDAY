@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    background: #0f172a;
+  }
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 15px rgba(255, 0, 128, 0.6), 0 0 30px rgba(255, 64, 129, 0.4);
+    transform: scale(1);
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(255, 0, 128, 0.9), 0 0 50px rgba(255, 105, 180, 0.6);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes flickerFlame {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px #ffb703) drop-shadow(0 0 16px #fb8500);
+  }
+  25% {
+    transform: scale(1.1, 0.9) rotate(2deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px #ffb703) drop-shadow(0 0 22px #fb8500);
+  }
+  50% {
+    transform: scale(0.92, 1.08) rotate(-2deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 7px #ffb703) drop-shadow(0 0 14px #fb8500);
+  }
+  75% {
+    transform: scale(1.05, 0.95) rotate(1deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #ffb703) drop-shadow(0 0 18px #fb8500);
+  }
+}
+
+@keyframes smokeRise {
+  0% {
+    opacity: 0.8;
+    transform: translateY(0) scale(0.6) rotate(0deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-25px) scale(1.2) rotate(15deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(1.8) rotate(-20deg);
+  }
+}
+
+@keyframes giftBounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: translateY(-10px) rotate(-3deg);
+  }
+  40% {
+    transform: translateY(0) rotate(3deg);
+  }
+  60% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+  80% {
+    transform: translateY(0) rotate(1deg);
+  }
+}
+
+.animate-glow-text {
+  animation: glowText 2.2s ease-in-out infinite alternate;
+}
+
+.animate-flicker-flame {
+  animation: flickerFlame 0.35s infinite alternate ease-in-out;
+  transform-origin: center bottom;
+}
+
+.animate-smoke {
+  animation: smokeRise 1.6s forwards ease-out;
+}
+
+.animate-gift-bounce {
+  animation: giftBounce 2s infinite ease-in-out;
+}
+
+/* Custom scrollbar for modals and customizers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
